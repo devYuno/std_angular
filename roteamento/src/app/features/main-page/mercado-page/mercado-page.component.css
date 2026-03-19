@@ -1,0 +1,14 @@
+.mercados {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 1px;
+}
+
+h1 {
+    margin: 1rem 2rem;
+}
+
+.mercado {
+    display: flex;
+    justify-content: center;
+}

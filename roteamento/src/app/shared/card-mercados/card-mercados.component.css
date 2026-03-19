@@ -1,0 +1,16 @@
+.card-mercado {
+    width: 102rem;
+    height: 8rem;
+    margin: 1rem 0rem 0rem 3rem;
+    display: flex;
+    flex-direction: row;
+    color: rgb(1, 80, 133)
+}
+.card-mercado img {
+  width: 6rem;
+  height: 6rem;
+  border-radius: 4px;
+  object-fit: cover;
+  margin: 1rem;
+}
+
