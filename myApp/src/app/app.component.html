@@ -1,0 +1,11 @@
+{{nome}}
+<br>
+<!-- <app-button 
+    (Click)="foiClicado()" 
+    [label]="this.count.toString()"
+    /> -->
+
+<app-input
+    [Value]="nome"
+    (changed)="inputValueChanged($event)"
+></app-input>
