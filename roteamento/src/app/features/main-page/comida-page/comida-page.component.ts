@@ -8,8 +8,27 @@ import MockComidas, { IComida } from './Comidas.mock';
 })
 export class ComidaPageComponent {
   protected comidas: IComida[] = []
+  protected flagModal = false;
+  protected selectedComida: IComida | null = null;
 
   constructor () {
     this.comidas = MockComidas;
   }
+
+  openModal(comida: IComida) {
+    if (!this.flagModal) {
+      this.flagModal = true;
+      this.selectedComida = comida;
+    } 
+  }
+
+  closeModal(close: boolean) {
+    if (!close) {
+      this.flagModal = close;
+      this.selectedComida = null;
+    }
+  }
+
+
 }
+

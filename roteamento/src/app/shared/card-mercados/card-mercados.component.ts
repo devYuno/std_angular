@@ -1,5 +1,5 @@
 import { Component, Input } from '@angular/core';
-import IMercado, { IMercados } from 'src/app/features/main-page/mercado-page/Mercados.mosck';
+import { IMercado } from 'src/app/features/main-page/mercado-page/Mercados.mosck';
 
 @Component({
   selector: 'app-card-mercados',
@@ -8,5 +8,5 @@ import IMercado, { IMercados } from 'src/app/features/main-page/mercado-page/Mer
 })
 export class CardMercadosComponent {
   @Input()
-    mercado!: IMercados;
+    mercado!: IMercado;
 }

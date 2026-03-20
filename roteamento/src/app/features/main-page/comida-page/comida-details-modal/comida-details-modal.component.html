@@ -1,0 +1,25 @@
+<div class="modal-bg">
+    <div class="modal-container">
+        <img src={{comida?.image}} alt="" class="comidaImagem">
+        <div class="box-conteudo">
+            <div class="first row">
+                <h1>{{comida?.name}}</h1>
+                <img src="https://icons.veryicon.com/png/o/miscellaneous/all-blue-icon/close-428.png" alt="" class="closeButton" (click)="closeModal()">
+            </div>
+            <div class="description">
+                <p class="fonttext">{{comida?.description}}</p>
+            </div>
+            <div class="row">
+                <p class="fonttext title">Categoria:</p>
+                <p class="fonttext">{{comida?.category}}</p>
+            </div>
+            <div class="row">
+                <div class="cash">
+                    <p class="title fonttext">R$</p>
+                    <p class="fonttext" style="font-weight: bold;">{{comida?.price}}</p>
+                </div>
+            </div>
+        </div>
+
+    </div>
+</div>

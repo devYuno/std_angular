@@ -1,4 +1,5 @@
-export interface IMercados {
+export interface IMercado {
+    id: number;
     nome: string,
     cidade: string,
     bairro: string,
@@ -9,8 +10,9 @@ export interface IMercados {
     email: string
 }
 
-export const MockMercado: IMercados[] = [
+export const MockMercado: IMercado[] = [
     {
+        id: 1,
         nome: "Mercado Central Curitiba",
         cidade: "Curitiba",
         bairro: "Centro",
@@ -21,6 +23,7 @@ export const MockMercado: IMercados[] = [
         email: "central@mercado.com"
     },
     {
+        id: 2,
         nome: "Supermercado Cabral",
         cidade: "Curitiba",
         bairro: "Cabral",
@@ -31,6 +34,7 @@ export const MockMercado: IMercados[] = [
         email: "cabral@mercado.com"
     },
     {
+        id: 3,
         nome: "Vila Supermarket",
         cidade: "Curitiba",
         bairro: "Batel",
@@ -41,6 +45,7 @@ export const MockMercado: IMercados[] = [
         email: "vila@supermercado.com"
     },
     {
+        id: 4,
         nome: "Mercado Água Verde",
         cidade: "Curitiba",
         bairro: "Água Verde",
@@ -51,6 +56,7 @@ export const MockMercado: IMercados[] = [
         email: "aguaverde@mercado.com"
     },
     {
+        id: 5,
         nome: "Supermercado Portão",
         cidade: "Curitiba",
         bairro: "Portão",
@@ -61,6 +67,7 @@ export const MockMercado: IMercados[] = [
         email: "portao@supermercado.com"
     },
     {
+        id: 6,
         nome: "Hortifruti Mercês",
         cidade: "Curitiba",
         bairro: "Mercês",
@@ -71,6 +78,7 @@ export const MockMercado: IMercados[] = [
         email: "merces@hortifruti.com"
     },
     {
+        id: 7,
         nome: "Mini Mercado São Francisco",
         cidade: "Curitiba",
         bairro: "São Francisco",
@@ -81,6 +89,7 @@ export const MockMercado: IMercados[] = [
         email: "saofrancisco@mercado.com"
     },
     {
+        id: 8,
         nome: "Supermercado Rebouças",
         cidade: "Curitiba",
         bairro: "Rebouças",
@@ -91,6 +100,7 @@ export const MockMercado: IMercados[] = [
         email: "reboucas@supermercado.com"
     },
     {
+        id: 9,
         nome: "Mercadão do Batel",
         cidade: "Curitiba",
         bairro: "Batel",
@@ -101,6 +111,7 @@ export const MockMercado: IMercados[] = [
         email: "batel@mercadao.com"
     },
     {
+        id: 10,
         nome: "Supermercado Santa Felicidade",
         cidade: "Curitiba",
         bairro: "Santa Felicidade",
@@ -111,6 +122,7 @@ export const MockMercado: IMercados[] = [
         email: "santafelicidade@mercado.com"
     },
     {
+        id: 11,
         nome: "Supermercado Bigorrilho",
         cidade: "Curitiba",
         bairro: "Bigorrilho",
@@ -121,6 +133,7 @@ export const MockMercado: IMercados[] = [
         email: "bigorrilho@supermercado.com"
     },
     {
+        id: 12,
         nome: "Mercadinho Água Clara",
         cidade: "Curitiba",
         bairro: "Água Clara",
@@ -132,4 +145,4 @@ export const MockMercado: IMercados[] = [
     }
 ];
 
-export default IMercados;
+export default MockMercado;

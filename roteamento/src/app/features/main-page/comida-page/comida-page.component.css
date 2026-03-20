@@ -2,6 +2,11 @@
     display: flex;
     flex-wrap: wrap;
     gap: 16px;
+    margin: 0rem 0rem 0rem 4rem;
+}
+
+.comida{
+    margin: .5rem;
 }
 
 h1 {
