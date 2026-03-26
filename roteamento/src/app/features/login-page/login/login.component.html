@@ -1,9 +1,9 @@
 <app-modal [Title]="'Login'">
     <div class="row">
-        <input type="text" placeholder="E-mail">
+        <input type="text" placeholder="E-mail" (input)="onInput($event, email)" >
     </div>
     <div class="row">
-        <input type="text" placeholder="Senha">
+        <input type="text" placeholder="Senha" (input)="onInput($event, senha)">
     </div>
     <div class="row">
         <button class="btn-default">Entrar</button>
