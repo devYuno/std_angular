@@ -15,6 +15,7 @@ import { CardMercadosComponent } from './shared/card-mercados/card-mercados.comp
 import { ComidaDetailsModalComponent } from './features/main-page/comida-page/comida-details-modal/comida-details-modal.component';
 import { UserRegisterComponent } from './features/login-page/user-register/user-register.component';
 import { ModalComponent } from './shared/modal/modal.component';
+import { LoginComponent } from './features/login-page/login/login.component';
 
 @NgModule({
   declarations: [
@@ -30,7 +31,8 @@ import { ModalComponent } from './shared/modal/modal.component';
     CardMercadosComponent,
     ComidaDetailsModalComponent,
     UserRegisterComponent,
-    ModalComponent
+    ModalComponent,
+    LoginComponent
   ],
   imports: [
     BrowserModule,

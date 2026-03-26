@@ -6,15 +6,17 @@ import { NotFoundPageComponent } from './features/not-found-page/not-found-page.
 import { MercadoPageComponent } from './features/main-page/mercado-page/mercado-page.component';
 import { ComidaPageComponent } from './features/main-page/comida-page/comida-page.component';
 import { UserRegisterComponent } from './features/login-page/user-register/user-register.component';
+import { LoginComponent } from './features/login-page/login/login.component';
 
 const routes: Routes = [
-  {path: '', component: MainPageComponent, children:[
+  {path: 'home', component: MainPageComponent, children:[
     {path: "mercado", component: MercadoPageComponent},
     {path: "comida", component: ComidaPageComponent}
     
   ]},
-  {path: 'login', component: LoginPageComponent, children:[
-    {path: "user-register", component: UserRegisterComponent}
+  {path: '', component: LoginPageComponent, children:[
+    {path: "register", component: UserRegisterComponent},
+    {path: "login", component: LoginComponent}
   ]},
   {path: '**', component: NotFoundPageComponent}
 ];
