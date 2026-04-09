@@ -1,0 +1,16 @@
+.page{
+    width: 100vw;
+    height: 100vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    top: 1;
+}
+
+.quadro{
+    width: max-content;
+    height: max-content;
+    display: grid;
+    grid-template-columns: repeat(300, 1fr);
+    grid-template-rows: repeat(300, 1fr);
+}

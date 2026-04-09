@@ -1,0 +1,9 @@
+.px{
+    width: 3px;
+    height: 3px;
+    background-color: white;
+}
+
+.px:hover {
+    border: solid .1px black;
+}

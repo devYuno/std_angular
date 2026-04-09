@@ -1,0 +1,27 @@
+<div class="page">
+    <app-modal-auth [Title]="'Criar Usuário'">
+        <div class="row">
+            <input type="text" placeholder="Nome Completo">
+        </div>
+        <div class="row">
+            <input type="text" placeholder="Telefone">
+            <input type="text" placeholder="CPF">
+        </div>
+        <div class="row">
+            <input type="text" placeholder="E-mail">
+        </div>
+        <div class="row">
+            <input type="text" placeholder="Senha">
+            <input type="text" placeholder="Confirmar senha">
+        </div>
+        <div class="row">
+            <button class="btn-default">Cadastrar</button>
+        </div>
+        <div class="row">
+            <div class="space"></div>
+            <a href="login">Já tenho uma conta</a>
+            <div class="space"></div>
+        </div>
+    </app-modal-auth>
+</div>
+<router-outlet></router-outlet>

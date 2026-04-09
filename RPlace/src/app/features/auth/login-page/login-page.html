@@ -1,0 +1,20 @@
+<div class="page">
+    <app-modal-auth [Title]="'Login'" class="modal-login">
+        <div class="row">
+            <input type="text" placeholder="E-mail" (input)="onInput($event, email)" >
+        </div>
+        <div class="row">
+            <input type="text" placeholder="Senha" (input)="onInput($event, senha)">
+        </div>
+        <div class="row">
+            <button class="btn-default">Entrar</button>
+        </div>
+        <div class="row">
+            <div class="space"></div>
+            <a href="register">Não tenho uma conta</a>
+            <div class="space"></div>
+        </div>
+    </app-modal-auth>
+
+</div>
+<router-outlet></router-outlet>

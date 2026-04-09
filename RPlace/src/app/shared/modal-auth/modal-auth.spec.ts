@@ -1,17 +1,17 @@
 import { ComponentFixture, TestBed } from '@angular/core/testing';
 
-import { MainPage } from './main-page';
+import { ModalAuth } from './modal-auth';
 
-describe('MainPage', () => {
-  let component: MainPage;
-  let fixture: ComponentFixture<MainPage>;
+describe('ModalAuth', () => {
+  let component: ModalAuth;
+  let fixture: ComponentFixture<ModalAuth>;
 
   beforeEach(async () => {
     await TestBed.configureTestingModule({
-      imports: [MainPage],
+      imports: [ModalAuth],
     }).compileComponents();
 
-    fixture = TestBed.createComponent(MainPage);
+    fixture = TestBed.createComponent(ModalAuth);
     component = fixture.componentInstance;
     await fixture.whenStable();
   });
