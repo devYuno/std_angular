@@ -1,16 +1,28 @@
+* {
+    font-family: system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+}
+
 .page{
     width: 100vw;
     height: 100vh;
     display: flex;
     justify-content: center;
-    align-items: center;
-    top: 1;
+    align-items: center;  
+    background-color: rgb(198, 204, 255);
+    /* top: 5rem; */
+    
+    /* padding-top: 3.5rem; */
+    flex-direction: column;
 }
 
 .quadro{
     width: max-content;
     height: max-content;
+    border: solid 1px;
     display: grid;
-    grid-template-columns: repeat(300, 1fr);
-    grid-template-rows: repeat(300, 1fr);
+    grid-template-columns: repeat(150, 1fr);
+    grid-template-rows: repeat(150, 1fr);
 }

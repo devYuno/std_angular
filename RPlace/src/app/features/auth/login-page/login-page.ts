@@ -1,16 +1,52 @@
 import { Component } from '@angular/core';
 import { RouterOutlet } from "@angular/router";
 import { ModalAuth } from "../../../shared/modal-auth/modal-auth";
+import { AuthApi } from '../../../domain/auth.api';
+import { FormControl, FormGroup, ReactiveFormsModule, Validators, ɵInternalFormsSharedModule } from '@angular/forms';
+import { LoginDto } from '../../../domain/UserInterfaces';
 
 @Component({
   selector: 'app-login-page',
-  imports: [RouterOutlet, ModalAuth],
+  imports: [RouterOutlet, ModalAuth, ReactiveFormsModule],
   templateUrl: './login-page.html',
   styleUrl: './login-page.css',
 })
 export class LoginPage {
-  realEmail: string = "aaa";
-  realSenha: string = "123";
+
+ constructor(private api : AuthApi) {}
+
+  loginForm : FormGroup = new FormGroup({
+    username: new FormControl('', [Validators.required]),
+    password: new FormControl('', [Validators.required])
+  })
+
+  get Username() {
+    return this.loginForm.get("username")
+  }
+  get Password() {
+    return this.loginForm.get("password")
+  }
+
+  login = () => {
+
+    if (!this.loginForm.valid)
+    {
+      alert("Nem todos os campos são válidos!");
+      return
+    }
+    const data: LoginDto = {
+      username: this.Username?.value,
+      password: this.Password?.value
+    }
+
+    this.api.login(data).subscribe(
+      res => {
+        console.log(res)
+        sessionStorage.setItem("token", res);
+        location.reload();
+      }
+    );
+  }
 
 
   email: string = '';
@@ -23,10 +59,5 @@ export class LoginPage {
       this.senha = event.target.value;
     }
   }
-
-  login() {
-    if (this.email == this.realEmail && this.senha == this.realSenha) {
-      
-    }
-  }
+  
 }

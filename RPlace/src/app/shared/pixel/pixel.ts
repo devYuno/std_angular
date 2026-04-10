@@ -11,15 +11,10 @@ import { PixelModel } from './pixel.model';
 export class Pixel {
   @Input() pixel!: PixelModel;
 
-  // @Input()
-  // x!: number;
-  // @Input()
-  // y!: number;
-
   @Input()
   inputColor: string = "white";
  
-  cor: string = "green";
+  cor: string = "purple";
   
   pintar() {
     this.cor = this.inputColor;

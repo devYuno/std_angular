@@ -8,4 +8,7 @@ import { RouterOutlet } from "@angular/router";
   templateUrl: './register-page.html',
   styleUrl: './register-page.css',
 })
-export class RegisterPage {}
+export class RegisterPage {
+
+  
+}
