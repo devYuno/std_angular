@@ -1,5 +1,6 @@
 import { Component, Input } from '@angular/core';
 import { PixelModel } from './pixel.model';
+import { ColoredPixel } from '../../domain/ColoredPixel/ColoredInterface';
 
 @Component({
   selector: 'app-pixel',
@@ -9,14 +10,5 @@ import { PixelModel } from './pixel.model';
 })
 
 export class Pixel {
-  @Input() pixel!: PixelModel;
-
-  @Input()
-  inputColor: string = "white";
- 
-  cor: string = "purple";
-  
-  pintar() {
-    this.cor = this.inputColor;
-  }
+  @Input() pixel!: ColoredPixel;
 }

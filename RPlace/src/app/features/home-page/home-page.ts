@@ -3,10 +3,8 @@ import { Header } from "../../shared/header/header";
 import { Pixel } from "../../shared/pixel/pixel";
 import { RouterOutlet } from "@angular/router";
 import { PixelModel } from '../../shared/pixel/pixel.model';
-import { AuthApi } from '../../domain/auth.api';
-import { FormControl, FormGroup, Validators } from '@angular/forms';
-import { ColoredPixel } from '../../domain/ColoredPixel/ColoredInterface';
 import { ColoredPixelApi } from '../../domain/ColoredPixel/colored.api';
+import { ColoredPixel } from '../../domain/ColoredPixel/ColoredInterface';
 
 @Component({
   selector: 'app-home-page',
@@ -18,8 +16,8 @@ export class HomePage {
 
   constructor(private api: ColoredPixelApi) { }
 
-  pixels: PixelModel[] = [];
-  pxSelecionado?: PixelModel | null = null;
+  pixels: ColoredPixel[] = [];
+  pxSelecionado?: ColoredPixel | null = null;
 
   cor: string = "blue";
 
@@ -27,17 +25,17 @@ export class HomePage {
 
     for (let y = 0; y < 150; y++) {
       for (let x = 0; x < 150; x++) {
-        this.pixels.push(new PixelModel(x, y, 'white'));
+        this.pixels.push({x: x, y: y, color: "white"});
       }
     }
 
     this.api.getPixels().subscribe(
       res => {
         console.log(res.map((log) => {
-          const pixel = this.pixels.find(p => p.x === log.x && p.y === log.y)
+          let pixel = this.pixels.find(p => p.x === log.x && p.y === log.y)
 
           if (pixel) {
-            pixel.cor = log.color
+            pixel = log
           }
         }))
       }
@@ -45,9 +43,9 @@ export class HomePage {
 
   }
 
-  selecionar(px: PixelModel) {
+  selecionar(px: ColoredPixel) {
     this.pxSelecionado = px;
-    px.cor = this.cor;
+    px.color = this.cor;
     console.log(px.x, px.y)
   }
 }

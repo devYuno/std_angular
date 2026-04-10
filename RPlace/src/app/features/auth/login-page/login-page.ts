@@ -1,8 +1,8 @@
 import { Component } from '@angular/core';
-import { RouterOutlet } from "@angular/router";
+import { Router, RouterOutlet } from "@angular/router";
 import { ModalAuth } from "../../../shared/modal-auth/modal-auth";
 import { AuthApi } from '../../../domain/auth.api';
-import { FormControl, FormGroup, ReactiveFormsModule, Validators, ɵInternalFormsSharedModule } from '@angular/forms';
+import { FormControl, FormGroup, ReactiveFormsModule, Validators } from '@angular/forms';
 import { LoginDto } from '../../../domain/UserInterfaces';
 
 @Component({
@@ -13,7 +13,7 @@ import { LoginDto } from '../../../domain/UserInterfaces';
 })
 export class LoginPage {
 
- constructor(private api : AuthApi) {}
+ constructor(private api : AuthApi , private router: Router ) {}
 
   loginForm : FormGroup = new FormGroup({
     username: new FormControl('', [Validators.required]),
@@ -43,21 +43,22 @@ export class LoginPage {
       res => {
         console.log(res)
         sessionStorage.setItem("token", res);
-        location.reload();
+        this.router.navigate(["/"], { replaceUrl: true })
+        // location.reload();
       }
     );
   }
 
 
-  email: string = '';
-  senha: string = '';
+  // email: string = '';
+  // senha: string = '';
 
-  onInput(event: any, campo: string) {
-    if (campo == "email") {
-      this.email = event.target.value;
-    } else if (campo == "senha") {
-      this.senha = event.target.value;
-    }
-  }
+  // onInput(event: any, campo: string) {
+  //   if (campo == "email") {
+  //     this.email = event.target.value;
+  //   } else if (campo == "senha") {
+  //     this.senha = event.target.value;
+  //   }
+  // }
   
 }

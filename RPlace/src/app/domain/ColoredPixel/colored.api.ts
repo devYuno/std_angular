@@ -12,5 +12,5 @@ export class ColoredPixelApi extends Api {
       return this.client.get<ColoredPixel[]>(`${this.URL}/pixel`).pipe();
     }
 
-    paintPixel = (data: ColoredPixel) 
+    // paintPixel = (data: ColoredPixel) 
 }

@@ -1,5 +1,5 @@
-<app-header></app-header>
 <div class="page">
+    <app-header></app-header>
     <div class="quadro">
          @for (px of pixels; track $index) {                            
             <app-pixel [pixel]="px" (click)="selecionar(px)"></app-pixel>        

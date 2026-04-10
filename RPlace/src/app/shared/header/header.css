@@ -4,8 +4,9 @@ header {
     display: flex;
     justify-content: space-between;
     align-items: center;
-    /* position: absolute; */
+    position: absolute;
     top: 0;
+    left: 0;
     background-color: rgb(102, 11, 248);
     padding: 1rem;
     color: white;

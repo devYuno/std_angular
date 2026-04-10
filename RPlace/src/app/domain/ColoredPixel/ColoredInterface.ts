@@ -1,11 +1,11 @@
 export interface ColoredPixel {
-    id: string
+    id?: string
     x: number
     y: number
-    lastChange: Date
+    lastChange?: Date
     color: string
-    user: {
-        id: string
-        username: string
+    user?: {
+        id?: string
+        username?: string
     }
 }
