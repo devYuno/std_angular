@@ -5,8 +5,8 @@ import { RegisterPage } from './features/auth/register-page/register-page';
 import { authGuard } from './domain/authGuard/auth-guard';
 
 export const routes: Routes = [
-    {path: '', component: HomePage /*, canMatch: [authGuard] */},
-    {path: 'login', component: LoginPage},
-    {path: 'register', component: RegisterPage}
+    {path: 'register', component: RegisterPage, canMatch: [authGuard]}
+    {path: 'login', component: LoginPage, canMatch: [authGuard]},
+    {path: '', component: HomePage, canMatch: [authGuard]},
 ];
 

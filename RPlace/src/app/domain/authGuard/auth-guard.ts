@@ -4,8 +4,19 @@ import { CanMatchFn, Router } from '@angular/router';
 export const authGuard: CanMatchFn = (route, segments) => {
   
   const router = inject(Router);
-  if (!sessionStorage.getItem('token'))
-    return router.navigate(["login"])
+  let logged = false;
 
-  return true;
+  if (sessionStorage.getItem('token'))
+    logged = true;
+
+  if (route.path === "login") {
+    if (logged) {
+      return router.navigate(["/"])
+    }
+    else {
+      return true
+    }
+  }
+  
+  return true
 };
